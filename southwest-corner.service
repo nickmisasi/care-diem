@@ -1,0 +1,14 @@
+[Unit]
+Description=Southwest Corner REST API backend
+
+[Service]
+ExecStart=/home/sysadmin/Backend/bin/www
+Restart=always
+User=nobody
+Group=nogroup 
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/sysadmin/Backend
+
+[Install]
+WantedBy=multi-user.target
